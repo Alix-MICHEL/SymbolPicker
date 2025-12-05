@@ -11,7 +11,7 @@ import Foundation
 class SymbolLists{
     public static let symbolSections: [SymbolSection] = [
         .init(
-            title: String(localized: "Maps", bundle: .main),
+            title: NSLocalizedString("Maps", bundle: Bundle.module, comment: ""),
             symbols: [
                 .init(
                     symbolName: "car.fill",
