@@ -21,6 +21,7 @@ public struct SymbolPicker: View {
     let isUsingColorPicker: Bool
     private var dismissType: SymbolPickerDismissType = .manual
     private var symbolsStyle: SymbolPickerSymbolsStyle = .filled
+    private var searchVisibility: Bool = true
     private var action: (() -> Void)? = nil
     
     @State private var offsetCalculated: CGFloat = 0
@@ -94,18 +95,20 @@ public struct SymbolPicker: View {
                 if isUsingColorPicker{
                     SPColorPicker(colorValue: $colorValue, geo: geo)
                 }
-                SearchBar(text: $searchText, prompt: SymbolPickerTranslation.searchPrompt.value)
-                    .searchBarStyle(.rounded)
-                    .if{ content in
-                        if #available(macOS 26.0, *){
-                            content.searchBarMaterial(.glass)
-                        }else{
-                            content
+                if searchVisibility {
+                    SearchBar(text: $searchText, prompt: SymbolPickerTranslation.searchPrompt.value)
+                        .searchBarStyle(.rounded)
+                        .if{ content in
+                            if #available(macOS 26.0, *){
+                                content.searchBarMaterial(.glass)
+                            }else{
+                                content
+                            }
                         }
-                    }
-                    .padding(.horizontal, 12)
-                    .padding(.top, isUsingColorPicker ? 4 : 12)
-                    .padding(.bottom, 10)
+                        .padding(.horizontal, 12)
+                        .padding(.top, isUsingColorPicker ? 4 : 12)
+                        .padding(.bottom, 10)
+                }
                 SPSymbolsList(searchText: $searchText, symbolName: $symbolName, isUsingFilledSymbols: isUsingFilledSymbols, dismissType: dismissType, loadedSymbols: loadedSymbols, geo: geo, isPresented: $isPresented, action: action)
                 Spacer()
             }
@@ -129,7 +132,7 @@ public struct SymbolPicker: View {
                             SPColorPicker(colorValue: $colorValue, geo: geo)
                                 .listRowInsets(EdgeInsets(top: 12, leading: 12, bottom: 12, trailing: 12))
                         }
-                        SPSymbolsList(searchText: $searchText, symbolName: $symbolName, isUsingFilledSymbols: isUsingFilledSymbols, dismissType: dismissType, loadedSymbols: loadedSymbols, geo: geo, isPresented: $isPresented, action: action)
+                        SPSymbolsList(searchText: $searchText, symbolName: $symbolName, isUsingFilledSymbols: isUsingFilledSymbols, dismissType: dismissType, searchVisibility: searchVisibility, loadedSymbols: loadedSymbols, geo: geo, isPresented: $isPresented, action: action)
                         #if os(iOS)
                             .listRowInsets(EdgeInsets(top: 6, leading: 11, bottom: 6, trailing: 11))
                         #else
@@ -193,7 +196,7 @@ public struct SymbolPicker: View {
         
                             SPColorPicker(colorValue: $colorValue, geo: geo)
                         }
-                        SPSymbolsList(searchText: $searchText, symbolName: $symbolName, isUsingFilledSymbols: isUsingFilledSymbols, dismissType: dismissType, loadedSymbols: loadedSymbols, geo: geo, isPresented: $isPresented, action: action)
+                        SPSymbolsList(searchText: $searchText, symbolName: $symbolName, isUsingFilledSymbols: isUsingFilledSymbols, dismissType: dismissType, searchVisibility: searchVisibility, loadedSymbols: loadedSymbols, geo: geo, isPresented: $isPresented, action: action)
                     }
                     .if{ content in
                         if #available(iOS 15.0, macOS 12.0, *){
@@ -384,6 +387,11 @@ public extension SymbolPicker{
         var copy = self
         copy.dismissType = type
         copy.action = action
+        return copy
+    }
+    func symbolPickerSearch(visible: Bool = true) -> Self {
+        var copy = self
+        copy.searchVisibility = visible
         return copy
     }
 }

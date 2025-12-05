@@ -15,23 +15,25 @@ struct SPSymbolsList: View, @MainActor Equatable {
     @Binding var symbolName: String
     var isUsingFilledSymbols: Bool
     var dismissType: SymbolPickerDismissType
+    var searchVisibility: Bool
     let loadedSymbols: [SymbolSection]
     var geo: GeometryProxy
     @Binding var isPresented: Bool
     var action: (() -> Void)?
     var body: some View {
         if #available(iOS 15.0, macOS 12.0, visionOS 1.0, *){
-            SPSymbolsListNew(searchText: $searchText, symbolName: $symbolName, isUsingFilledSymbols: isUsingFilledSymbols, dismissType: dismissType, loadedSymbols: loadedSymbols, geo: geo, action: action)
+            SPSymbolsListNew(searchText: $searchText, symbolName: $symbolName, isUsingFilledSymbols: isUsingFilledSymbols, dismissType: dismissType, searchVisibility: searchVisibility, loadedSymbols: loadedSymbols, geo: geo, action: action)
         }else{
-            SPSymbolsListOld(searchText: $searchText, symbolName: $symbolName, isPresented: $isPresented, isUsingFilledSymbols: isUsingFilledSymbols, dismissType: dismissType, loadedSymbols: loadedSymbols, action: action, geo: geo)
+            SPSymbolsListOld(searchText: $searchText, symbolName: $symbolName, isPresented: $isPresented, isUsingFilledSymbols: isUsingFilledSymbols, dismissType: dismissType, searchVisibility: searchVisibility, loadedSymbols: loadedSymbols, action: action, geo: geo)
         }
     }
     
-    init(searchText: Binding<String>, symbolName: Binding<String>, isUsingFilledSymbols: Bool, dismissType: SymbolPickerDismissType, loadedSymbols: [SymbolSection], geo: GeometryProxy, isPresented: Binding<Bool>, action: (() -> Void)?) {
+    init(searchText: Binding<String>, symbolName: Binding<String>, isUsingFilledSymbols: Bool, dismissType: SymbolPickerDismissType, searchVisibility: Bool, loadedSymbols: [SymbolSection], geo: GeometryProxy, isPresented: Binding<Bool>, action: (() -> Void)?) {
         self._searchText = searchText
         self._symbolName = symbolName
         self.isUsingFilledSymbols = isUsingFilledSymbols
         self.dismissType = dismissType
+        self.searchVisibility = searchVisibility
         self.loadedSymbols = loadedSymbols
         self.geo = geo
         self._isPresented = isPresented
@@ -50,6 +52,7 @@ struct SPSymbolsListContent: View, @MainActor Equatable {
     @Binding var symbolName: String
     var isUsingFilledSymbols: Bool
     var dismissType: SymbolPickerDismissType
+    var searchVisibility: Bool
     let loadedSymbols: [SymbolSection]
     var geo: GeometryProxy
     var size1: CGFloat
@@ -70,35 +73,36 @@ struct SPSymbolsListContent: View, @MainActor Equatable {
             let sizeWidth: CGFloat = 28
             let sizeHeight: CGFloat = 28
 #endif
-            
+            if searchVisibility {
 #if !os(macOS)
-            SearchBar(text: $searchText, prompt: SymbolPickerTranslation.searchPrompt.value)
-                .if{ content in
-                    if #available(iOS 26.0, visionOS 26.0, *) {
-                        content
+                SearchBar(text: $searchText, prompt: SymbolPickerTranslation.searchPrompt.value)
+                    .if{ content in
+                        if #available(iOS 26.0, visionOS 26.0, *) {
+                            content
 #if os(iOS)
-                            .searchBarStyle(cornerRadius: 15, backgroundColor: color)
-                            .searchBarScale(.medium)
-                            .padding(.bottom, -8)
-                            .padding(.horizontal, -8)
+                                .searchBarStyle(cornerRadius: 15, backgroundColor: color)
+                                .searchBarScale(.medium)
+                                .padding(.bottom, -8)
+                                .padding(.horizontal, -8)
 #else
-                            .searchBarStyle(.rectangle, backgroundColor: color)
+                                .searchBarStyle(.rectangle, backgroundColor: color)
 #endif
-                    } else {
-                        content
-                            .searchBarStyle(.rounded, backgroundColor: color)
+                        } else {
+                            content
+                                .searchBarStyle(.rounded, backgroundColor: color)
 #if os(iOS)
-                            .padding(.bottom, -8)
-                            .padding(.horizontal, -8)
+                                .padding(.bottom, -8)
+                                .padding(.horizontal, -8)
 #endif
+                        }
                     }
-                }
 #if !os(iOS)
-                .padding(.top, -5)
-                .padding(.bottom, -20)
-                .padding(.horizontal, -20)
+                    .padding(.top, -5)
+                    .padding(.bottom, -20)
+                    .padding(.horizontal, -20)
 #endif
 #endif
+            }
             LazyVStack{
                 ForEach(loadedSymbols) { section in
                     let symbols = section.symbols.filter{$0.isAvailable}
@@ -163,6 +167,7 @@ struct SPSymbolsListNew: View, @MainActor Equatable {
     @Binding var symbolName: String
     var isUsingFilledSymbols: Bool
     var dismissType: SymbolPickerDismissType
+    var searchVisibility: Bool
     let loadedSymbols: [SymbolSection]
     var geo: GeometryProxy
     var action: (() -> Void)?
@@ -223,7 +228,7 @@ struct SPSymbolsListNew: View, @MainActor Equatable {
         #endif
     }
     var body: some View {
-        SPSymbolsListContent(searchText: $searchText, symbolName: $symbolName, isUsingFilledSymbols: isUsingFilledSymbols, dismissType: dismissType, loadedSymbols: loadedSymbols, geo: geo, size1: size1, size2: size2) {
+        SPSymbolsListContent(searchText: $searchText, symbolName: $symbolName, isUsingFilledSymbols: isUsingFilledSymbols, dismissType: dismissType, searchVisibility: searchVisibility, loadedSymbols: loadedSymbols, geo: geo, size1: size1, size2: size2) {
             dismiss()
             action?()
         }
@@ -242,6 +247,7 @@ struct SPSymbolsListOld: View, @MainActor Equatable {
     @Binding var isPresented: Bool
     var isUsingFilledSymbols: Bool
     var dismissType: SymbolPickerDismissType
+    var searchVisibility: Bool
     let loadedSymbols: [SymbolSection]
     var action: (() -> Void)?
     var geo: GeometryProxy
@@ -281,7 +287,7 @@ struct SPSymbolsListOld: View, @MainActor Equatable {
     }
     
     var body: some View {
-        SPSymbolsListContent(searchText: $searchText, symbolName: $symbolName, isUsingFilledSymbols: isUsingFilledSymbols, dismissType: dismissType, loadedSymbols: loadedSymbols, geo: geo, size1: size1, size2: size2) {
+        SPSymbolsListContent(searchText: $searchText, symbolName: $symbolName, isUsingFilledSymbols: isUsingFilledSymbols, dismissType: dismissType, searchVisibility: searchVisibility, loadedSymbols: loadedSymbols, geo: geo, size1: size1, size2: size2) {
             isPresented = false
             action?()
         }

@@ -15,6 +15,7 @@ public struct SymbolPickerModifier<Content: View>: View {
     @Binding var colorValue: SymbolColor
     private var dismissType: SymbolPickerDismissType = .manual
     private var symbolsStyle: SymbolPickerSymbolsStyle = .filled
+    private var searchVisibility: Bool = true
     private var action: (() -> Void)? = nil
     let isUsingColorPicker: Bool
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
@@ -37,10 +38,12 @@ public struct SymbolPickerModifier<Content: View>: View {
                     SymbolPicker(isPresented: $isPresented, symbolName: $symbolName, color: $colorValue)
                         .symbolPickerDismiss(type: dismissType, action: action)
                         .symbolPickerSymbolsStyle(symbolsStyle)
+                        .symbolPickerSearch(visible: searchVisibility)
                 }else{
                     SymbolPicker(isPresented: $isPresented, symbolName: $symbolName)
                         .symbolPickerDismiss(type: dismissType, action: action)
                         .symbolPickerSymbolsStyle(symbolsStyle)
+                        .symbolPickerSearch(visible: searchVisibility)
                 }
             }
         #else
@@ -51,10 +54,12 @@ public struct SymbolPickerModifier<Content: View>: View {
                         SymbolPicker(isPresented: $isPresented, symbolName: $symbolName, color: $colorValue)
                             .symbolPickerDismiss(type: dismissType, action: action)
                             .symbolPickerSymbolsStyle(symbolsStyle)
+                            .symbolPickerSearch(visible: searchVisibility)
                     }else{
                         SymbolPicker(isPresented: $isPresented, symbolName: $symbolName)
                             .symbolPickerDismiss(type: dismissType, action: action)
                             .symbolPickerSymbolsStyle(symbolsStyle)
+                            .symbolPickerSearch(visible: searchVisibility)
                     }
                 }
         }else{
@@ -64,10 +69,12 @@ public struct SymbolPickerModifier<Content: View>: View {
                         SymbolPicker(isPresented: $isPresented, symbolName: $symbolName, color: $colorValue)
                             .symbolPickerDismiss(type: dismissType, action: action)
                             .symbolPickerSymbolsStyle(symbolsStyle)
+                            .symbolPickerSearch(visible: searchVisibility)
                     }else{
                         SymbolPicker(isPresented: $isPresented, symbolName: $symbolName)
                             .symbolPickerDismiss(type: dismissType, action: action)
                             .symbolPickerSymbolsStyle(symbolsStyle)
+                            .symbolPickerSearch(visible: searchVisibility)
                     }
                 }
         }
@@ -140,6 +147,11 @@ public extension SymbolPickerModifier{
         var copy = self
         copy.dismissType = type
         copy.action = action
+        return copy
+    }
+    func symbolPickerSearch(visible: Bool = true) -> Self {
+        var copy = self
+        copy.searchVisibility = visible
         return copy
     }
 }

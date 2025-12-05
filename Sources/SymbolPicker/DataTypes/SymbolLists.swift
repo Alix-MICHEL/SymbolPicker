@@ -106,7 +106,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: String(localized: "Devices"),
+            title: NSLocalizedString("Devices", bundle: Bundle.module, comment: ""),
             symbols: [
                 .init(
                     symbolName: "macpro.gen1.fill",
@@ -407,7 +407,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: String(localized: "Transport"),
+            title: NSLocalizedString("Transport", bundle: Bundle.module, comment: ""),
             symbols: [
                 .init(
                     symbolName: "car.fill",
@@ -507,7 +507,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: String(localized: "Automotive"),
+            title: NSLocalizedString("Automotive", bundle: Bundle.module, comment: ""),
             symbols: [
                 .init(
                     symbolName: "car.fill",
@@ -637,7 +637,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: String(localized: "Health"),
+            title: NSLocalizedString("Health", bundle: Bundle.module, comment: ""),
             symbols: [
                 .init(
                     symbolName: "list.bullet.clipboard.fill",
@@ -767,7 +767,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: String(localized: "Objects & Tools"),
+            title: NSLocalizedString("Objects & Tools", bundle: Bundle.module, comment: ""),
             symbols: [
                 .init(
                     symbolName: "pencil",
@@ -1602,7 +1602,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: String(localized: "Gaming"),
+            title: NSLocalizedString("Gaming", bundle: Bundle.module, comment: ""),
             symbols: [
                 .init(
                     symbolName: "house.fill",
@@ -1667,7 +1667,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: String(localized: "Home"),
+            title: NSLocalizedString("Home", bundle: Bundle.module, comment: ""),
             symbols: [
                 .init(
                     symbolName: "house.fill",
@@ -1953,7 +1953,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: String(localized: "Commerce"),
+            title: NSLocalizedString("Commerce", bundle: Bundle.module, comment: ""),
             symbols: [
                 .init(
                     symbolName: "creditcard.fill",
@@ -2148,7 +2148,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: String(localized: "Weather"),
+            title: NSLocalizedString("Weather", bundle: Bundle.module, comment: ""),
             symbols: [
                 .init(
                     symbolName: "sun.max.fill",
@@ -2293,7 +2293,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: String(localized: "Nature"),
+            title: NSLocalizedString("Nature", bundle: Bundle.module, comment: ""),
             symbols: [
                 .init(
                     symbolName: "carrot.fill",
@@ -2428,7 +2428,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: String(localized: "Human"),
+            title: NSLocalizedString("Human", bundle: Bundle.module, comment: ""),
             symbols: [
                 .init(
                     symbolName: "person.fill",
@@ -2523,7 +2523,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: String(localized: "Keyboard"),
+            title: NSLocalizedString("Keyboard", bundle: Bundle.module, comment: ""),
             symbols: [
                 .init(
                     symbolName: "globe",
@@ -2578,7 +2578,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: String(localized: "Camera & Photos"),
+            title: NSLocalizedString("Camera & Photos", bundle: Bundle.module, comment: ""),
             symbols: [
                 .init(
                     symbolName: "swirl.circle.righthalf.filled",
@@ -2668,7 +2668,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: String(localized: "Communication"),
+            title: NSLocalizedString("Communication", bundle: Bundle.module, comment: ""),
             symbols: [
                 .init(
                     symbolName: "microphone.fill",
@@ -2758,7 +2758,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: String(localized: "Media"),
+            title: NSLocalizedString("Media", bundle: Bundle.module, comment: ""),
             symbols: [
                 .init(
                     symbolName: "play.fill",
@@ -2828,7 +2828,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: String(localized: "Connectivity"),
+            title: NSLocalizedString("Connectivity", bundle: Bundle.module, comment: ""),
             symbols: [
                 .init(
                     symbolName: "externaldrive.connected.to.line.below.fill",
@@ -2878,7 +2878,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: String(localized: "Fitness"),
+            title: NSLocalizedString("Fitness", bundle: Bundle.module, comment: ""),
             symbols: [
                 .init(
                     symbolName: "flame.fill",
@@ -3398,7 +3398,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: String(localized: "Accessibility"),
+            title: NSLocalizedString("Accessibility", bundle: Bundle.module, comment: ""),
             symbols: [
                 .init(
                     symbolName: "figure",
@@ -3488,7 +3488,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: String(localized: "Time"),
+            title: NSLocalizedString("Time", bundle: Bundle.module, comment: ""),
             symbols: [
                 .init(
                     symbolName: "clock.fill",
@@ -3543,7 +3543,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: String(localized: "Privacy & Security"),
+            title: NSLocalizedString("Privacy & Security", bundle: Bundle.module, comment: ""),
             symbols: [
                 .init(
                     symbolName: "lock.open.fill",
@@ -3633,7 +3633,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: String(localized: "Editing"),
+            title: NSLocalizedString("Editing", bundle: Bundle.module, comment: ""),
             symbols: [
                 .init(
                     symbolName: "pencil",
@@ -3753,7 +3753,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: String(localized: "People"),
+            title: NSLocalizedString("People", bundle: Bundle.module, comment: ""),
             symbols: [
                 .init(
                     symbolName: "hand.thumbsup.fill",
@@ -3803,7 +3803,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: String(localized: "Symbols"),
+            title: NSLocalizedString("Symbols", bundle: Bundle.module, comment: ""),
             symbols: [
                 .init(
                     symbolName: "square.2.layers.3d",
@@ -4053,7 +4053,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: String(localized: "Arrows"),
+            title: NSLocalizedString("Arrows", bundle: Bundle.module, comment: ""),
             symbols: [
                 .init(
                     symbolName: "arrowshape.left.fill",
@@ -4143,7 +4143,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: String(localized: "Shapes"),
+            title: NSLocalizedString("Shapes", bundle: Bundle.module, comment: ""),
             symbols: [
                 .init(
                     symbolName: "circle.fill",
@@ -4289,7 +4289,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: String(localized: "Maths"),
+            title: NSLocalizedString("Maths", bundle: Bundle.module, comment: ""),
             symbols: [
                 .init(
                     symbolName: "x.squareroot",
@@ -4389,7 +4389,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: String(localized: "Indices"),
+            title: NSLocalizedString("Indices", bundle: Bundle.module, comment: ""),
             symbols: [
                 .init(
                     symbolName: "eurosign",
@@ -4554,7 +4554,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: String(localized: "Text Formatting"),
+            title: NSLocalizedString("Text Formatting", bundle: Bundle.module, comment: ""),
             symbols: [
                 .init(
                     symbolName: "fleuron.fill",
