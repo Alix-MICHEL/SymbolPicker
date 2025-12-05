@@ -11,7 +11,7 @@ import Foundation
 class SymbolLists{
     public static let symbolSections: [SymbolSection] = [
         .init(
-            title: String(localized: String(localized: "Maps"),
+            title: String(localized: "Maps"),
             symbols: [
                 .init(
                     symbolName: "car.fill",
@@ -106,7 +106,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: String(localized: String(localized: "Devices"),
+            title: String(localized: "Devices"),
             symbols: [
                 .init(
                     symbolName: "macpro.gen1.fill",
