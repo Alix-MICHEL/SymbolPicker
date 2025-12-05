@@ -1,9 +1,248 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "Accessibility" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accessibilité"
+          }
+        }
+      }
+    },
+    "Arrows" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flèches"
+          }
+        }
+      }
+    },
+    "Automotive" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Automobile"
+          }
+        }
+      }
+    },
+    "Camera & Photos" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appareil photo et photos"
+          }
+        }
+      }
+    },
+    "Commerce" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Commerce"
+          }
+        }
+      }
+    },
+    "Communication" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Communication"
+          }
+        }
+      }
+    },
+    "Connectivity" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Connectivité"
+          }
+        }
+      }
+    },
+    "Devices" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appareils"
+          }
+        }
+      }
+    },
+    "Editing" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Édition"
+          }
+        }
+      }
+    },
+    "Fitness" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sport"
+          }
+        }
+      }
+    },
+    "Gaming" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jeux"
+          }
+        }
+      }
+    },
+    "Health" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Santé"
+          }
+        }
+      }
+    },
+    "Home" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Domicile"
+          }
+        }
+      }
+    },
+    "Human" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Humain"
+          }
+        }
+      }
+    },
+    "Indices" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Indices"
+          }
+        }
+      }
+    },
+    "Keyboard" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clavier"
+          }
+        }
+      }
+    },
+    "Maps" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plans"
+          }
+        }
+      }
+    },
+    "Maths" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maths"
+          }
+        }
+      }
+    },
+    "Media" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Multimédia"
+          }
+        }
+      }
+    },
+    "Nature" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nature"
+          }
+        }
+      }
+    },
+    "Objects & Tools" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Objets et outils"
+          }
+        }
+      }
+    },
+    "People" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Personnes"
+          }
+        }
+      }
+    },
+    "Privacy & Security" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Confidentialité et sécurité"
+          }
+        }
+      }
+    },
+    "Shapes" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Formes"
+          }
+        }
+      }
+    },
     "SymbolPickerTranslation.Close" : {
       "comment" : "Text for Close Button",
-      "extractionState" : "extracted_with_value",
       "localizations" : {
         "af" : {
           "stringUnit" : {
@@ -765,7 +1004,6 @@
     },
     "SymbolPickerTranslation.ColorPicker" : {
       "comment" : "Custom Color Picker for Symbols",
-      "extractionState" : "extracted_with_value",
       "localizations" : {
         "af" : {
           "stringUnit" : {
@@ -1527,7 +1765,6 @@
     },
     "SymbolPickerTranslation.SearchPrompt" : {
       "comment" : "Default Prompt for SearchBar",
-      "extractionState" : "extracted_with_value",
       "localizations" : {
         "af" : {
           "stringUnit" : {
@@ -2289,7 +2526,6 @@
     },
     "SymbolPickerTranslation.Title" : {
       "comment" : "Title for Symbol Picker",
-      "extractionState" : "extracted_with_value",
       "localizations" : {
         "af" : {
           "stringUnit" : {
@@ -3045,6 +3281,56 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Izithonjana"
+          }
+        }
+      }
+    },
+    "Symbols" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Symboles"
+          }
+        }
+      }
+    },
+    "Text Formatting" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Formatage du texte"
+          }
+        }
+      }
+    },
+    "Time" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Temps"
+          }
+        }
+      }
+    },
+    "Transport" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Transports"
+          }
+        }
+      }
+    },
+    "Weather" : {
+      "localizations" : {
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Météo"
           }
         }
       }
