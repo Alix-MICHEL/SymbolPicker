@@ -11,7 +11,7 @@ import Foundation
 class SymbolLists{
     public static let symbolSections: [SymbolSection] = [
         .init(
-            title: "Maps",
+            title: String(localized: String(localized: "Maps"),
             symbols: [
                 .init(
                     symbolName: "car.fill",
@@ -106,7 +106,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: "Devices",
+            title: String(localized: String(localized: "Devices"),
             symbols: [
                 .init(
                     symbolName: "macpro.gen1.fill",
@@ -407,7 +407,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: "Transport",
+            title: String(localized: "Transport"),
             symbols: [
                 .init(
                     symbolName: "car.fill",
@@ -507,7 +507,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: "Automotive",
+            title: String(localized: "Automotive"),
             symbols: [
                 .init(
                     symbolName: "car.fill",
@@ -637,7 +637,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: "Health",
+            title: String(localized: "Health"),
             symbols: [
                 .init(
                     symbolName: "list.bullet.clipboard.fill",
@@ -767,7 +767,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: "Objects & Tools",
+            title: String(localized: "Objects & Tools"),
             symbols: [
                 .init(
                     symbolName: "pencil",
@@ -1602,7 +1602,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: "Gaming",
+            title: String(localized: "Gaming"),
             symbols: [
                 .init(
                     symbolName: "house.fill",
@@ -1667,7 +1667,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: "Home",
+            title: String(localized: "Home"),
             symbols: [
                 .init(
                     symbolName: "house.fill",
@@ -1953,7 +1953,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: "Commerce",
+            title: String(localized: "Commerce"),
             symbols: [
                 .init(
                     symbolName: "creditcard.fill",
@@ -2148,7 +2148,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: "Weather",
+            title: String(localized: "Weather"),
             symbols: [
                 .init(
                     symbolName: "sun.max.fill",
@@ -2293,7 +2293,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: "Nature",
+            title: String(localized: "Nature"),
             symbols: [
                 .init(
                     symbolName: "carrot.fill",
@@ -2428,7 +2428,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: "Human",
+            title: String(localized: "Human"),
             symbols: [
                 .init(
                     symbolName: "person.fill",
@@ -2523,7 +2523,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: "Keyboard",
+            title: String(localized: "Keyboard"),
             symbols: [
                 .init(
                     symbolName: "globe",
@@ -2578,7 +2578,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: "Camera & Photos",
+            title: String(localized: "Camera & Photos"),
             symbols: [
                 .init(
                     symbolName: "swirl.circle.righthalf.filled",
@@ -2668,7 +2668,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: "Communication",
+            title: String(localized: "Communication"),
             symbols: [
                 .init(
                     symbolName: "microphone.fill",
@@ -2758,7 +2758,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: "Media",
+            title: String(localized: "Media"),
             symbols: [
                 .init(
                     symbolName: "play.fill",
@@ -2828,7 +2828,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: "Connectivity",
+            title: String(localized: "Connectivity"),
             symbols: [
                 .init(
                     symbolName: "externaldrive.connected.to.line.below.fill",
@@ -2878,7 +2878,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: "Fitness",
+            title: String(localized: "Fitness"),
             symbols: [
                 .init(
                     symbolName: "flame.fill",
@@ -3398,7 +3398,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: "Accessibility",
+            title: String(localized: "Accessibility"),
             symbols: [
                 .init(
                     symbolName: "figure",
@@ -3488,7 +3488,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: "Time",
+            title: String(localized: "Time"),
             symbols: [
                 .init(
                     symbolName: "clock.fill",
@@ -3543,7 +3543,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: "Privacy & Security",
+            title: String(localized: "Privacy & Security"),
             symbols: [
                 .init(
                     symbolName: "lock.open.fill",
@@ -3633,7 +3633,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: "Editing",
+            title: String(localized: "Editing"),
             symbols: [
                 .init(
                     symbolName: "pencil",
@@ -3753,7 +3753,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: "People",
+            title: String(localized: "People"),
             symbols: [
                 .init(
                     symbolName: "hand.thumbsup.fill",
@@ -3803,7 +3803,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: "Symbols",
+            title: String(localized: "Symbols"),
             symbols: [
                 .init(
                     symbolName: "square.2.layers.3d",
@@ -4053,7 +4053,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: "Arrows",
+            title: String(localized: "Arrows"),
             symbols: [
                 .init(
                     symbolName: "arrowshape.left.fill",
@@ -4143,7 +4143,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: "Shapes",
+            title: String(localized: "Shapes"),
             symbols: [
                 .init(
                     symbolName: "circle.fill",
@@ -4289,7 +4289,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: "Maths",
+            title: String(localized: "Maths"),
             symbols: [
                 .init(
                     symbolName: "x.squareroot",
@@ -4389,7 +4389,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: "Indices",
+            title: String(localized: "Indices"),
             symbols: [
                 .init(
                     symbolName: "eurosign",
@@ -4554,7 +4554,7 @@ class SymbolLists{
             ]
         ),
         .init(
-            title: "Text Formatting",
+            title: String(localized: "Text Formatting"),
             symbols: [
                 .init(
                     symbolName: "fleuron.fill",
