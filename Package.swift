@@ -7,7 +7,7 @@ let package = Package(
     name: "SymbolPicker",
     defaultLocalization: "en",
     platforms: [
-        .macOS(.v11), .iOS(.v14), .visionOS(.v1)
+        .macOS(.v11), .iOS(.v15), .visionOS(.v1)
     ],
     products: [
         .library(name: "SymbolPicker", targets: ["SymbolPicker"])
